@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191204134048_Pierwsza.cs" />
+    <Compile Remove="Migrations\20191204134048_Pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191204153315_Pierwsza.cs" />
+    <Compile Remove="Migrations\20191204153315_Pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205172835_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205172835_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205174527_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205174527_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205174738_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205174738_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205174925_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205174925_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205175207_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205175207_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205180504_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205180504_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205182544_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205182544_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205183448_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205183448_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205183647_pierwsza.cs" />
+    <Compile Remove="Migrations\20191205183647_pierwsza.Designer.cs" />
+    <Compile Remove="Migrations\20191205184740_druga.cs" />
+    <Compile Remove="Migrations\20191205184740_druga.Designer.cs" />
+    <Compile Remove="Migrations\20191205190313_Trzecia.cs" />
+    <Compile Remove="Migrations\20191205190313_Trzecia.Designer.cs" />
+    <Compile Remove="Migrations\20191205191107_Czwarta.cs" />
+    <Compile Remove="Migrations\20191205191107_Czwarta.Designer.cs" />
+    <Compile Remove="Migrations\20191205214240_5.cs" />
+    <Compile Remove="Migrations\20191205214240_5.Designer.cs" />
+    <Compile Remove="Migrations\20191205215338_6.cs" />
+    <Compile Remove="Migrations\20191205215338_6.Designer.cs" />
+    <Compile Remove="Migrations\20191205215634_7.cs" />
+    <Compile Remove="Migrations\20191205215634_7.Designer.cs" />
+    <Compile Remove="Migrations\20191206142822_v5.cs" />
+    <Compile Remove="Migrations\20191206142822_v5.Designer.cs" />
+    <Compile Remove="Migrations\20191206143137_v6.cs" />
+    <Compile Remove="Migrations\20191206143137_v6.Designer.cs" />
+    <Compile Remove="Migrations\20191206143330_v7.cs" />
+    <Compile Remove="Migrations\20191206143330_v7.Designer.cs" />
+    <Compile Remove="Migrations\20191206143825_1.cs" />
+    <Compile Remove="Migrations\20191206143825_1.Designer.cs" />
+    <Compile Remove="Migrations\20191206153022_2.cs" />
+    <Compile Remove="Migrations\20191206153022_2.Designer.cs" />
+    <Compile Remove="Migrations\20191206153117_1.cs" />
+    <Compile Remove="Migrations\20191206153117_1.Designer.cs" />
+    <Compile Remove="Migrations\20191206175558_1.cs" />
+    <Compile Remove="Migrations\20191206175558_1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

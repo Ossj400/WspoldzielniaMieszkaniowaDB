@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+<Node Id="IModel" Label="WspoldzielniaContext" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" PropertyAccessMode="PropertyAccessMode.Default" ProductVersion="3.0.1" Annotations="Relational:MaxIdentifierLength: 128
+SqlServer:ValueGenerationStrategy: IdentityColumn" Category="Model" Group="Expanded" />
+<Node Id = "Elektryk" Label="Elektryk" Name="Elektryk" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding
+Relational:TableName: Electricians" Category="EntityType" Group="Expanded" />
+<Node Id = "Mieszkanie" Label="Mieszkanie" Name="Mieszkanie" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding
+Relational:TableName: Flat" Category="EntityType" Group="Expanded" />
+<Node Id = "Elektryk.ElectricianId" Label="ElectricianId" Name="ElectricianId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Electrician_ID
+SqlServer:ValueGenerationStrategy: IdentityColumn
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Elektryk.ElName" Label="ElName" Name="ElName" Category="Property Required" Type="string" MaxLength="20" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: EL_FIRTS_NAME
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Elektryk.ElSurname" Label="ElSurname" Name="ElSurname" Category="Property Required" Type="string" MaxLength="20" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: EL_LAST_NAME
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Mieszkaniec" Label="Mieszkaniec" Name="Mieszkaniec" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding
+Relational:TableName: Occupant" Category="EntityType" Group="Expanded" />
+<Node Id = "Mieszkanie.FlatId" Label="FlatId" Name="FlatId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Flat_ID
+SqlServer:ValueGenerationStrategy: IdentityColumn
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Mieszkanie.Family" Label="Family (1)" Name="Family" Category="Navigation Property" Type="Rodzina"  Field="&lt;Family&gt;k__BackingField" Dependent="" Principal="Rodzina" Inverse="Mieszkania" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Mieszkanie.FkFamilyId" Label="FkFamilyId" Name="FkFamilyId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Family_ID
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Mieszkanie.FlatCost" Label="FlatCost" Name="FlatCost" Category="Property Required" Type="decimal" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Flat_COST
+Relational:ColumnType: money
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Piwnica" Label="Piwnica" Name="Piwnica" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding
+Relational:TableName: Basement" Category="EntityType" Group="Expanded" />
+<Node Id = "Mieszkaniec.OccupantId" Label="OccupantId" Name="OccupantId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Occupant_ID
+SqlServer:ValueGenerationStrategy: IdentityColumn
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Mieszkaniec.Family" Label="Family (1)" Name="Family" Category="Navigation Property" Type="Rodzina"  Field="&lt;Family&gt;k__BackingField" Dependent="" Principal="Rodzina" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Mieszkaniec.Age" Label="Age" Name="Age" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Occupant_Age
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Mieszkaniec.FkFamilyId" Label="FkFamilyId" Name="FkFamilyId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Family_ID
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Mieszkaniec.Name" Label="Name" Name="Name" Category="Property Required" Type="string" MaxLength="20" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: NAME
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Mieszkaniec.Surname" Label="Surname" Name="Surname" Category="Property Required" Type="string" MaxLength="20" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20
+Relational:ColumnName: SURNAME
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PraceElektryczne" Label="PraceElektryczne" Name="PraceElektryczne" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding
+Relational:TableName: Electric_Works" Category="EntityType" Group="Expanded" />
+<Node Id = "Piwnica.BasementId" Label="BasementId" Name="BasementId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: BASEMENT_ID
+SqlServer:ValueGenerationStrategy: IdentityColumn
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Piwnica.FlatId" Label="FlatId" Name="FlatId" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Rodzina" Label="Rodzina" Name="Rodzina" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding
+Relational:TableName: Family" Category="EntityType" Group="Expanded" />
+<Node Id = "PraceElektryczne.FlatId" Label="FlatId" Name="FlatId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Flat_ID
+SqlServer:ValueGenerationStrategy: IdentityColumn
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "PraceElektryczne.Electrician" Label="Electrician (1)" Name="Electrician" Category="Navigation Property" Type="Elektryk"  Field="&lt;Electrician&gt;k__BackingField" Dependent="" Principal="Elektryk" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "PraceElektryczne.Cost" Label="Cost" Name="Cost" Category="Property Required" Type="decimal" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: COST
+Relational:ColumnType: money
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PraceElektryczne.FkElectricianId" Label="FkElectricianId" Name="FkElectricianId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: Electrician_ID
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="True" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PraceElektryczne.WorkDate" Label="WorkDate" Name="WorkDate" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: DATE
+TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Rodzina" Label="Rodzina" Name="Rodzina" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="" Category="EntityType" Group="Expanded" />
+<Node Id = "Rodzina.FamilyId" Label="FamilyId" Name="FamilyId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnName: FAMILY_ID
+SqlServer:ValueGenerationStrategy: IdentityColumn
+TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Rodzina.Mieszkania" Label="Mieszkania (*)" Name="Mieszkania" Category="Navigation Collection" Type="List&lt;Mieszkanie&gt;"  Field="&lt;Mieszkania&gt;k__BackingField" Dependent="Mieszkanie" Principal="" Inverse="Family" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Rodzina.FamilySurname" Label="FamilySurname" Name="FamilySurname" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+<Link Source = "IModel" Target="Elektryk" Category="Contains" />
+<Link Source = "IModel" Target="Mieszkanie" Category="Contains" />
+<Link Source = "Elektryk" Target="Elektryk.ElectricianId" Category="Contains" />
+<Link Source = "Elektryk" Target="Elektryk.ElName" Category="Contains" />
+<Link Source = "Elektryk" Target="Elektryk.ElSurname" Category="Contains" />
+<Link Source = "IModel" Target="Mieszkaniec" Category="Contains" />
+<Link Source = "Mieszkanie" Target="Mieszkanie.Family" Category="Contains" />
+<Link Source = "Mieszkanie" Target="Mieszkanie.FlatId" Category="Contains" />
+<Link Source="Mieszkanie" Target="Rodzina" From="Mieszkanie.FkFamilyId" To="Rodzina.FamilyId" Name="Mieszkanie -> Rodzina" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "Mieszkanie" Target="Mieszkanie.FkFamilyId" Category="Contains" />
+<Link Source = "Mieszkanie" Target="Mieszkanie.FlatCost" Category="Contains" />
+<Link Source = "IModel" Target="Piwnica" Category="Contains" />
+<Link Source = "Mieszkaniec" Target="Mieszkaniec.Family" Category="Contains" />
+<Link Source = "Mieszkaniec" Target="Mieszkaniec.OccupantId" Category="Contains" />
+<Link Source="Mieszkaniec" Target="Rodzina" From="Mieszkaniec.FkFamilyId" To="Rodzina.FamilyId" Name="Mieszkaniec -> Rodzina" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "Mieszkaniec" Target="Mieszkaniec.Age" Category="Contains" />
+<Link Source = "Mieszkaniec" Target="Mieszkaniec.FkFamilyId" Category="Contains" />
+<Link Source = "Mieszkaniec" Target="Mieszkaniec.Name" Category="Contains" />
+<Link Source = "Mieszkaniec" Target="Mieszkaniec.Surname" Category="Contains" />
+<Link Source = "IModel" Target="PraceElektryczne" Category="Contains" />
+<Link Source = "Piwnica" Target="Piwnica.BasementId" Category="Contains" />
+<Link Source = "Piwnica" Target="Piwnica.FlatId" Category="Contains" />
+<Link Source = "IModel" Target="Rodzina" Category="Contains" />
+<Link Source = "PraceElektryczne" Target="PraceElektryczne.Electrician" Category="Contains" />
+<Link Source = "PraceElektryczne" Target="PraceElektryczne.FlatId" Category="Contains" />
+<Link Source="PraceElektryczne" Target="Elektryk" From="PraceElektryczne.FkElectricianId" To="Elektryk.ElectricianId" Name="PraceElektryczne -> Elektryk" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "PraceElektryczne" Target="PraceElektryczne.Cost" Category="Contains" />
+<Link Source = "PraceElektryczne" Target="PraceElektryczne.FkElectricianId" Category="Contains" />
+<Link Source = "PraceElektryczne" Target="PraceElektryczne.WorkDate" Category="Contains" />
+<Link Source = "IModel" Target="Rodzina" Category="Contains" />
+<Link Source = "Rodzina" Target="Rodzina.Mieszkania" Category="Contains" />
+<Link Source = "Rodzina" Target="Rodzina.FamilyId" Category="Contains" />
+<Link Source = "Rodzina" Target="Rodzina.FamilySurname" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+  <Properties>
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="Field"  Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type"  Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />    
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass"  Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+  </Properties>
+</DirectedGraph>
