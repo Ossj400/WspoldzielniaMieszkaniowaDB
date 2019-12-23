@@ -35,6 +35,25 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "OSIEDLA",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NazwaOsiedla = table.Column<string>(nullable: true),
+                    WskaźnikRentowności = table.Column<string>(nullable: false),
+                    TypSpółdzielni = table.Column<string>(nullable: false),
+                    NumerBloku = table.Column<int>(nullable: true),
+                    Ulica = table.Column<string>(maxLength: 80, nullable: true),
+                    NrKlatki = table.Column<string>(maxLength: 5, nullable: true),
+                    OplatyZaMediaWspoldzielone = table.Column<float>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OSIEDLA", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Flat",
                 columns: table => new
                 {
@@ -175,6 +194,9 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
 
             migrationBuilder.DropTable(
                 name: "Occupant");
+
+            migrationBuilder.DropTable(
+                name: "OSIEDLA");
 
             migrationBuilder.DropTable(
                 name: "Electricians");

@@ -9,8 +9,6 @@ namespace WspoldzielniaMieszkaniowaDB.Models
     [Table("Electric_Works")]
     public class PraceElektryczne
     {
-
-
         [Required]
         [Key, Column("WorkID")]
         public int WorkId { get; set; }

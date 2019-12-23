@@ -54,6 +54,32 @@
     <Compile Remove="Migrations\20191206153117_1.Designer.cs" />
     <Compile Remove="Migrations\20191206175558_1.cs" />
     <Compile Remove="Migrations\20191206175558_1.Designer.cs" />
+    <Compile Remove="Migrations\20191206180657_1.cs" />
+    <Compile Remove="Migrations\20191206180657_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223141232_1.cs" />
+    <Compile Remove="Migrations\20191223141232_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223142049_1.cs" />
+    <Compile Remove="Migrations\20191223142049_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223143016_1.cs" />
+    <Compile Remove="Migrations\20191223143016_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223155032_1.cs" />
+    <Compile Remove="Migrations\20191223155032_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223155624_1.cs" />
+    <Compile Remove="Migrations\20191223155624_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223175152_1.cs" />
+    <Compile Remove="Migrations\20191223175152_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223183229_1.cs" />
+    <Compile Remove="Migrations\20191223183229_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223184717_1.cs" />
+    <Compile Remove="Migrations\20191223184717_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223205141_1.cs" />
+    <Compile Remove="Migrations\20191223205141_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223210439_1.cs" />
+    <Compile Remove="Migrations\20191223210439_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223213556_1.cs" />
+    <Compile Remove="Migrations\20191223213556_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223220844_1.cs" />
+    <Compile Remove="Migrations\20191223220844_1.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

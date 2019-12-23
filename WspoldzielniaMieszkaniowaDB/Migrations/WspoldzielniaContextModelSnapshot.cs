@@ -103,6 +103,35 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                     b.ToTable("Occupant");
                 });
 
+            modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Osiedle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NazwaOs")
+                        .HasColumnName("NazwaOsiedla")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Rentowność")
+                        .IsRequired()
+                        .HasColumnName("WskaźnikRentowności")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RentownośćRozróżnianie")
+                        .IsRequired()
+                        .HasColumnName("TypSpółdzielni")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OSIEDLA");
+
+                    b.HasDiscriminator<string>("RentownośćRozróżnianie").HasValue("Osiedlaa");
+                });
+
             modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Piwnica", b =>
                 {
                     b.Property<int>("BasementId")
@@ -182,6 +211,44 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                     b.HasIndex("ElectricianWorkId");
 
                     b.ToTable("ElectricianJob");
+                });
+
+            modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Blok", b =>
+                {
+                    b.HasBaseType("WspoldzielniaMieszkaniowaDB.Models.Osiedle");
+
+                    b.Property<int>("Nr")
+                        .HasColumnName("NumerBloku")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Ulica")
+                        .IsRequired()
+                        .HasColumnName("Ulica")
+                        .HasColumnType("nvarchar(80)")
+                        .HasMaxLength(80);
+
+                    b.ToTable("OSIEDLA");
+
+                    b.HasDiscriminator().HasValue("Blok");
+                });
+
+            modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Klatka", b =>
+                {
+                    b.HasBaseType("WspoldzielniaMieszkaniowaDB.Models.Blok");
+
+                    b.Property<string>("NrKlatki")
+                        .IsRequired()
+                        .HasColumnName("NrKlatki")
+                        .HasColumnType("nvarchar(5)")
+                        .HasMaxLength(5);
+
+                    b.Property<float>("Oplaty")
+                        .HasColumnName("OplatyZaMediaWspoldzielone")
+                        .HasColumnType("real");
+
+                    b.ToTable("OSIEDLA");
+
+                    b.HasDiscriminator().HasValue("Klatka");
                 });
 
             modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Mieszkanie", b =>

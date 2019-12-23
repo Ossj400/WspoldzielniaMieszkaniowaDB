@@ -14,12 +14,15 @@ namespace WspoldzielniaMieszkaniowaDB.Models
         public DbSet<Mieszkaniec> Occupants { get; set; }
         public DbSet<PraceElektryczne> ElectricWorks { get; set; }
         public DbSet<Elektryk> Electricians { get; set; }
-
+        public DbSet<Osiedle> Osiedla { get; set; }
+        public DbSet<Blok> Bloki { get; set; }
+        public DbSet<Klatka> Klatki { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=OSSJ\SQLEXPRESS;Initial Catalog=WspolMieszkaNET;Integrated Security=True;Pooling=False");
-        }   
+            optionsBuilder.UseSqlServer(@"Data Source=OSSJ\SQLEXPRESS;Initial Catalog=WspolMieszk.NET2;Integrated Security=True;Pooling=False");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -75,6 +78,11 @@ namespace WspoldzielniaMieszkaniowaDB.Models
                 .HasOne(bc => bc.ElectricWorks)
                 .WithMany(c => c.ElectricWorks)
                 .HasForeignKey(bc => bc.ElectricianWorkId);
+
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(Klatka).Assembly);
+        
         }
+
     }
 }
