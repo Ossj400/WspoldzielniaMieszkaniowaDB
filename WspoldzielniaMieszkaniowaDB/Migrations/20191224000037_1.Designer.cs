@@ -10,7 +10,7 @@ using WspoldzielniaMieszkaniowaDB.Models;
 namespace WspoldzielniaMieszkaniowaDB.Migrations
 {
     [DbContext(typeof(WspoldzielniaContext))]
-    [Migration("20191223221446_1")]
+    [Migration("20191224000037_1")]
     partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,10 +49,8 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
             modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Mieszkanie", b =>
                 {
                     b.Property<int>("FlatId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Flat_ID")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("FkFamilyId")
                         .HasColumnName("Family_ID")
@@ -190,8 +188,8 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FamilySurname")
-                        .HasColumnType("int");
+                    b.Property<string>("FamilySurname")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FamilyId");
 

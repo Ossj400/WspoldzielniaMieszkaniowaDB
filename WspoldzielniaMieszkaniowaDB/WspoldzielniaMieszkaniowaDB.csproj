@@ -80,6 +80,16 @@
     <Compile Remove="Migrations\20191223213556_1.Designer.cs" />
     <Compile Remove="Migrations\20191223220844_1.cs" />
     <Compile Remove="Migrations\20191223220844_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223221446_1.cs" />
+    <Compile Remove="Migrations\20191223221446_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223223301_1.cs" />
+    <Compile Remove="Migrations\20191223223301_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223233813_1.cs" />
+    <Compile Remove="Migrations\20191223233813_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223235224_1.cs" />
+    <Compile Remove="Migrations\20191223235224_1.Designer.cs" />
+    <Compile Remove="Migrations\20191223235616_1.cs" />
+    <Compile Remove="Migrations\20191223235616_1.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

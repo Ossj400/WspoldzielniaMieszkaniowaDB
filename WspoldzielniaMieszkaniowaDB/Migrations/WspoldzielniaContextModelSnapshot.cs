@@ -47,10 +47,8 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
             modelBuilder.Entity("WspoldzielniaMieszkaniowaDB.Models.Mieszkanie", b =>
                 {
                     b.Property<int>("FlatId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnName("Flat_ID")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<int>("FkFamilyId")
                         .HasColumnName("Family_ID")
@@ -188,8 +186,8 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("FamilySurname")
-                        .HasColumnType("int");
+                    b.Property<string>("FamilySurname")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FamilyId");
 

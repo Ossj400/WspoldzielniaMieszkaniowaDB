@@ -16,7 +16,7 @@ namespace WspoldzielniaMieszkaniowaDB.Models
         public DbSet<Elektryk> Electricians { get; set; }
         public DbSet<Osiedle> Osiedla { get; set; }
         public DbSet<Blok> Bloki { get; set; }
-        public DbSet<Klatka> Klatki { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -58,9 +58,9 @@ namespace WspoldzielniaMieszkaniowaDB.Models
                 .HasColumnName("FAMILY_ID");
 
             modelBuilder.Entity<PraceElektryczne>()
-    .HasKey(k => k.FlatId);
+                 .HasKey(k => k.FlatId);
             modelBuilder.Entity<PraceElektryczne>()
-    .HasKey(k => k.WorkId);
+                 .HasKey(k => k.WorkId);
 
             //mieszkanie: interwencja-elektryczna
             modelBuilder.Entity<Mieszkanie>()
@@ -79,9 +79,7 @@ namespace WspoldzielniaMieszkaniowaDB.Models
                 .WithMany(c => c.ElectricWorks)
                 .HasForeignKey(bc => bc.ElectricianWorkId);
 
-
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(Klatka).Assembly);
-        
         }
 
     }

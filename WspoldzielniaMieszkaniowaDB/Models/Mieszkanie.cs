@@ -10,7 +10,7 @@ namespace WspoldzielniaMieszkaniowaDB.Models
     [Table("Flat")]
     public class Mieszkanie
     {
-        [Key, Column("Flat_ID")]
+        [Key, Column("Flat_ID"), DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int FlatId { get; set; }
 
         [Required, Column("Flat_COST", TypeName = "money")]

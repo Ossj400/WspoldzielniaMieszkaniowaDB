@@ -9,7 +9,7 @@ namespace WspoldzielniaMieszkaniowaDB.Models
     public class Rodzina
     {
         public int FamilyId { get; set; }
-        public int FamilySurname { get; set; }
+        public string FamilySurname { get; set; }
         public Mieszkanie Mieszkania { get; set; }
 
 

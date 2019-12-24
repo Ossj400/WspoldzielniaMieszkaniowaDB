@@ -27,7 +27,7 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                 {
                     FAMILY_ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FamilySurname = table.Column<int>(nullable: false)
+                    FamilySurname = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -57,8 +57,7 @@ namespace WspoldzielniaMieszkaniowaDB.Migrations
                 name: "Flat",
                 columns: table => new
                 {
-                    Flat_ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Flat_ID = table.Column<int>(nullable: false),
                     Flat_COST = table.Column<decimal>(type: "money", nullable: false),
                     Family_ID = table.Column<int>(nullable: false)
                 },

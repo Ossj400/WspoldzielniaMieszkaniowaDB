@@ -11,13 +11,12 @@ namespace WspoldzielniaMieszkaniowaDB.Models
 
     public class Osiedle : IEntityTypeConfiguration<Osiedle>
     {
-        [Key, Column("Id")]
+        [Key, Column("Id"),DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Column("NazwaOsiedla")]
         public string NazwaOs { get; set; }
         public Rentowność Rentowność { get; set; }
-
         public void Configure(EntityTypeBuilder<Osiedle> builder)
         {
                 builder.Property<string>("RentownośćRozróżnianie").IsRequired().HasConversion<string>().
